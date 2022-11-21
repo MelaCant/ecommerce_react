@@ -1,0 +1,11 @@
+.counter{
+    width: 100%;
+    border: none;
+    padding: 5px;
+    background-color: rgb(91, 86, 89);
+    color: #fff;
+    font-size: 0.8rem;
+    font-family: 'Poppins',sans-serif;
+    padding-top: 5px;
+    text-align: center;
+}
