@@ -21,7 +21,7 @@ const ItemDetail = ({ data }) =>{
             <img src={data.image} alt='' className='card_img'/>
             <h3>{data.name}</h3>
             {
-                cantidad ? (<Link to='cart'>Terminar compra</Link>) : (
+                cantidad >= 1 ? (<Link to='cart'>Terminar compra</Link>) : (
                     <ItemCount
                     stock={data.stock}
                     initial={data.stock !== 0 && quantity ? quantity : 1}
