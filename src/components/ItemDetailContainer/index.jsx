@@ -2,6 +2,7 @@ import React, {useState, useEffect} from "react"
 import {ItemDetail} from '../index'
 import { getProducts } from "../../data"
 import { useParams } from "react-router-dom"
+import './ItemDetailContainer.css'
 
 
 

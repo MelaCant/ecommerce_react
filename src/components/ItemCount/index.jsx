@@ -5,10 +5,10 @@ import {Button} from "../index"
 
 
 const ItemCount = ({initial, stock, onAdd}) =>{
-    const [count, setCount] = useState(parseInt(initial))
+    const [count, setCount] = useState(initial)
     
     useEffect(()=>{
-        setCount(parseInt(initial))
+        setCount(initial)
     },[initial])
     
     return(
@@ -20,8 +20,7 @@ const ItemCount = ({initial, stock, onAdd}) =>{
                 <div>
                     <Button disabled={stock <= 0} text='Agregar al carrito' onClick={onAdd(count)}/>  
                 </div>
-            </div>
-            
+            </div> 
         </> 
     )
 }
