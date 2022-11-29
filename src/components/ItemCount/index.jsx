@@ -1,7 +1,6 @@
-import React,{useState, useEffect} from "react"
+import React, { useState } from "react";
+import { useEffect } from "react";
 import './ItemCount.css'
-import {Button} from "../index"
-
 
 
 const ItemCount = ({initial, stock, onAdd}) =>{
@@ -10,18 +9,31 @@ const ItemCount = ({initial, stock, onAdd}) =>{
     useEffect(()=>{
         setCount(initial)
     },[initial])
+
+    function add() {
+        if (count >= 0 && count < stock) {
+          setCount(count + 1);
+        }
+      }
+      function remove() {
+        count > 1 && setCount(count - 1);
+    }
     
-    return(
-        <>
-            <div className='counter'>
-                <button disabled={count <= 1} onClick={()=> setCount(count - 1)}>-</button>
-                <span>{count}</span>
-                <button disabled={count >= stock} onClick={()=> setCount(count + 1)}>+</button>
-                <div>
-                    <Button disabled={stock <= 0} text='Agregar al carrito' onClick={onAdd(count)}/>  
-                </div>
-            </div> 
-        </> 
+    return (
+        <div className="countContainer">
+          <div className="buttonContainer">
+            <button onClick={() => remove()} className="buttonCount">
+              -
+            </button>
+            <p className="counter">{count}</p>
+            <button onClick={() => add()} className="buttonCount">
+              +
+            </button>
+          </div>
+          <button className="addChart" onClick={() => onAdd(count)}>
+            Add to chart
+          </button>
+        </div>
     )
 }
 

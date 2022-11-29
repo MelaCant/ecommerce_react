@@ -1,11 +1,36 @@
-.counter{
+.countContainer {
+    display: flex;
+    flex-direction: column;
+    width: 100px;
+    margin: 20px auto;
+  }
+  .buttonContainer {
+    display: flex;
+    width: 100%;
+  }
+  .buttonCount {
     width: 100%;
     border: none;
-    padding: 5px;
-    background-color: rgb(91, 86, 89);
-    color: rgb(0, 0, 0);
+    padding: 0.2rem;
+    background-color: rgb(222, 135, 196);
+    color: #fff;
     font-size: 0.8rem;
-    font-family: 'Poppins',sans-serif;
     padding-top: 5px;
+  }
+  .counter {
+    width: 80%;
     text-align: center;
+  }
+  .addChart {
+    width: 100%;
+    border: none;
+    background: rgb(116, 107, 107);
+    padding: 8px 2px;
+    color: var(--light-bg);
+    transition: var(--transition);
+  }
+  .addChart:hover {
+    background: rgb(71, 71, 71);
+    
 }
+  

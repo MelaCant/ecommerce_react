@@ -1,22 +1,24 @@
-import React from "react";
-import { useCartContext } from "../../context/CartContext";
-import {Link} from 'react-router-dom'
+import React, {useContext} from "react";
+import { Link } from 'react-router-dom'
+import { CartContext } from "../../context/CartContext";
 import './Cart.css' 
 
 const Cart = () => {
-    const { cart } = useCartContext()
+    const { cart} = useContext(CartContext );
     
     if(cart.lenght === 0){
         return(
             <>
-                <p className="text">No hay elementos en el carrito</p>
-                <Link to='/' className="text">Volver a productos</Link>
+                <p>No hay elementos en el carrito</p>
+                <Link to='/'>Volver a productos</Link>
             </>
         )
-    } 
-    
+    }
+
     return(
-        <div>Cart</div>
+        <>
+            <div>Cart</div>            
+        </>
     )
 
 }
