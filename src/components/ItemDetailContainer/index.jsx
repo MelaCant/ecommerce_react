@@ -1,6 +1,6 @@
 import React, {useState, useEffect} from "react"
+import {getFirestore, doc, getDoc} from 'firebase/firestore'
 import {ItemDetail} from '../index'
-import { getProducts } from "../../data"
 import { useParams } from "react-router-dom"
 import './ItemDetailContainer.css'
 
@@ -11,7 +11,10 @@ export const ItemDetailContainer = () =>{
     const {detalleId} =useParams()
 
     useEffect(() =>{
-        getProducts().then( res => setData(res.find(product => product.id === parseInt(detalleId))))  
+        const querydb = getFirestore()
+        const queryDoc = doc(querydb, 'products', detalleId)
+        getDoc(queryDoc) 
+            .then( res => setData({id : res.id, ...res.data()}))  
     },[detalleId])
 
     return(
