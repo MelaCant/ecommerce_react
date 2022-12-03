@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/MelaCant/ecommerce_react.git/static/css/main.31fa20e7.css",
+    "main.js": "/MelaCant/ecommerce_react.git/static/js/main.f5aeb840.js",
+    "index.html": "/MelaCant/ecommerce_react.git/index.html",
+    "main.31fa20e7.css.map": "/MelaCant/ecommerce_react.git/static/css/main.31fa20e7.css.map",
+    "main.f5aeb840.js.map": "/MelaCant/ecommerce_react.git/static/js/main.f5aeb840.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.31fa20e7.css",
+    "static/js/main.f5aeb840.js"
+  ]
+}
