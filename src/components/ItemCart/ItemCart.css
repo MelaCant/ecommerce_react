@@ -13,3 +13,13 @@
 .text{
     color: #ffff;
 }
+
+.eliminar{
+    width:auto;
+    border: none;
+    padding: 0.5rem;
+    background-color: rgb(222, 135, 196);
+    color: #fff;
+    font-size: 0.8rem;
+    margin-top: 2px;
+}

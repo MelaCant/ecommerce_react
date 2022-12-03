@@ -1,8 +1,8 @@
 import React from 'react'
-import { CartWidget, BurguerButton } from '../index'
+import { CartWidget } from '../index'
 import './NavBar.css'
 import logo from '../../assets/navbar/logo.png'
-import { NavLink } from 'react-router-dom'
+import { NavLink, Link} from 'react-router-dom'
 
 
 const NavBar = () => {
@@ -13,12 +13,11 @@ const NavBar = () => {
       </div>
       <nav>
         <section className="menu_container">
-          <div className='burguer'>
-            <BurguerButton/>
-          </div>
-          <span>
-            <img src={logo} className="logo" alt="logo"/>
-          </span>
+          <Link to='/'>
+            <span>
+              <img src={logo} className="logo" alt="logo"/>
+            </span>
+          </Link>
           <ul className="menu_links">
             <li className="menu_item">
               <NavLink className="menu_link" to='/'>Home</NavLink>

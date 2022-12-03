@@ -3,6 +3,7 @@
     height: auto;
     margin: 10px;
     color: #ffffff;
+    text-decoration: none;
 }
 
 .card h3, p{

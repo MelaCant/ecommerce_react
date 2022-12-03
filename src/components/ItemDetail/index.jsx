@@ -1,7 +1,7 @@
 import React, {useState, useContext} from "react"
 
 import { CartContext } from '../../context/CartContext'
-import { ItemCount } from '../index'
+import { ItemCount, Button } from '../index'
 import { Link } from "react-router-dom"
 import './ItemDetail.css'
 
@@ -21,16 +21,22 @@ const ItemDetail = ({ data }) =>{
             <img src={data.image} alt='' className='card_img'/>
             <h3>{data.name}</h3>
             {
-                cantidad >= 1 ? (<Link to='/cart'>Terminar compra</Link>) : (
+                cantidad >= 1 ? (<Link to='/cart'>
+                    <button className='compra_button'>Terminar compra
+                    </button></Link>) : (
                     <ItemCount
                     stock={data.stock}
                     initial={data.stock !== 0 && quantity ? quantity : 1}
                     onAdd={onAdd}
                 />
             )}
-            <div>
-                <Link to='/'>Volver a tienda</Link> 
-            </div>
+            
+            <Link to='/'>
+                <Button text='Volver a tienda'>
+                </Button>
+            </Link>
+                 
+            
         </div>    
     )
 }

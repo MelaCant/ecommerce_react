@@ -1,7 +1,7 @@
 .card{
     width: 200px;
     height: auto;
-    margin: 10px;
+    margin: 5%;
     color: #ffffff;
 }
 
@@ -15,4 +15,14 @@
 .card_img{
     width: 200px;
     height: 300px;
+}
+
+.compra_button{
+    width:100%;
+    border: none;
+    padding: 0.5rem;
+    background-color: rgb(69, 159, 103);
+    color: #fff;
+    font-size: 0.8rem;
+    margin: 15px 0;
 }

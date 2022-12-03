@@ -1,4 +1,3 @@
-export { default as BurguerButton} from './BurguerButton'
 export { default as Button} from './Button'
 export { default as NavBar} from './NavBar'
 export { default as CartWidget} from './CartWidget'
